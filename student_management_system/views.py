@@ -1,5 +1,3 @@
-# from django.shortcuts import render
-
 # Create your views here.
 from urllib import request
 from django.shortcuts import render
@@ -8,27 +6,27 @@ from django.template import loader
 from .models import Student
 
 
-def student_management_system(show):
+def student_management_system(request):
     return HttpResponse("Hello world!")
 
-def find_student(show):
+def find_student(request):
     return HttpResponse("Find Student Functionality")
 
 
-def template_view(show):
+def template_view(request):
   template = loader.get_template('index.html')
   return HttpResponse(template.render())
 
-def student_list(specific):
+def student_list(request):
   mystudents = Student.objects.all().values()
   template = loader.get_template('all_student.html')
   context = {
     'mystudents': mystudents,
   }
-  return HttpResponse(template.render(context, specific))
+  return HttpResponse(template.render(context, request))
 
 
-def details(student, id):
+def details(request, id):
   mystudent = Student.objects.get(id=id)
   template = loader.get_template('detail.html')
   context = {
