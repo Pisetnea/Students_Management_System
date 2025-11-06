@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    {% extends "master.html" %}
+
+    <!-- <h1>{{ mystudents.firstname }} {{ mystudents.lastname }}</h1>
+
+    <p>Email: {{ mystudents.email }}</p>
+    <p>Phone: {{ mystudents.phone }}</p>
+    <p>Member since: {{ mystudents.joined_date }}</p>
+
+    <p>Back to <a href="/student_list">Student</a></p> -->
+
+    
+
+    {% block title %}
+    Details about {{ mystudents.firstname }} {{ mystudents.lastname }}
+    {% endblock %}
+
+
+    {% block content %}
+    <h1>{{ mystudents.firstname }} {{ mystudents.lastname }}</h1>
+
+
+    <p>Email: {{ mystudents.email }}</p>
+    <p>Phone: {{ mystudents.phone }}</p>
+    <p>Member since: {{ mystudents.joined_date }}</p>
+
+    <p>Back to <a href="/student_list">Student</a></p>
+
+    {% endblock %}
+
+</body>
+
+</html>
