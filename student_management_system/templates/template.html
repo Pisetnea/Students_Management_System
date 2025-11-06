@@ -1,14 +1,19 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="{% static 'global.css' %}">
+</head>
+
 <body>
-
-{% for x in fruits %}
+  {% for x in fruits %}
   <h1>{{ x }}</h1>
-{% endfor %}
+  {% endfor %}
 
-<p>In views.py you can see what the fruits variable looks like.</p>
+  <p>In views.py you can see what the fruits variable looks like.</p>
 
-<!-- USERNAME = "admin"
+  <!-- USERNAME = "admin"
 PASSWORD = "12345"
 isLogin = False
 while not isLogin:
@@ -21,8 +26,6 @@ while not isLogin:
         print("Invalid username or password. Please try again.") -->
 
 
-
 </body>
+
 </html>
-
-
