@@ -19,21 +19,19 @@
     </ul> -->
 
     {% block title %}
-    List of all students
+        List of all students
     {% endblock %}
 
 
     {% block content %}
-
-    <p><a href="/">HOME</a></p>
-
-    <h1>Student</h1>
-
-    <ul>
-        {% for x in mystudents %}
-        <li><a href="detail/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
-        {% endfor %}
-    </ul>
+    <div class="mycard">
+        <h1>Student</h1>
+        <ul>
+            {% for x in mystudent %}
+            <li onclick="window.location = 'detail/{{ x.id }}'">{{ x.firstname }} {{ x.lastname }}</li>
+            {% endfor %}
+        </ul>
+    </div>
     {% endblock %}
 
 </body>

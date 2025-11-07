@@ -18,10 +18,10 @@ def template_view(request):
   return HttpResponse(template.render())
 
 def student_list(request):
-  mystudents = Student.objects.all().values()
+  mystudent = Student.objects.all().values()
   template = loader.get_template('all_student.html')
   context = {
-    'mystudents': mystudents,
+    'mystudent': mystudent,
   }
   return HttpResponse(template.render(context, request))
 
