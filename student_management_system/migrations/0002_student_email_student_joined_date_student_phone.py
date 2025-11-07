@@ -11,17 +11,17 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AddField(
-            model_name='student',
+            model_name='Student',
             name='email',
             field=models.EmailField(max_length=255, null=True),
         ),
         migrations.AddField(
-            model_name='student',
+            model_name='Student',
             name='joined_date',
             field=models.DateField(null=True),
         ),
         migrations.AddField(
-            model_name='student',
+            model_name='Student',
             name='phone',
             field=models.IntegerField(null=True),
         ),
